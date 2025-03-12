@@ -1,4 +1,5 @@
 import io
+import torch
 import librosa
 import requests
 import tempfile
@@ -42,6 +43,8 @@ def synthesize_speech(text, ref_audio, ref_text):
 # Load TTS model
 repo_id = "ai4bharat/IndicF5"
 model = AutoModel.from_pretrained(repo_id, trust_remote_code=True)
+device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+model = model.to(device)
 
 # Example Data (Multiple Examples)
 EXAMPLES = [
