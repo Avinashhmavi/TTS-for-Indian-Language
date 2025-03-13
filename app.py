@@ -1,4 +1,5 @@
 import io
+import spaces
 import torch
 import librosa
 import requests
@@ -16,6 +17,7 @@ def load_audio_from_url(url):
         return sample_rate, audio_data
     return None, None
 
+@spaces.GPU
 def synthesize_speech(text, ref_audio, ref_text):
     if ref_audio is None or ref_text.strip() == "":
         return "Error: Please provide a reference audio and its corresponding text."
