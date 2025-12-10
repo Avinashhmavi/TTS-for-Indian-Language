@@ -95,13 +95,9 @@ for example in EXAMPLES:
 with gr.Blocks() as iface:
     gr.Markdown(
         """
-        # **IndicF5: High-Quality Text-to-Speech for Indian Languages**
+        # **High-Quality Text-to-Speech for Indian Languages**
 
-        [![Hugging Face](https://img.shields.io/badge/HuggingFace-Model-orange)](https://huggingface.co/ai4bharat/IndicF5)
-
-        We release **IndicF5**, a **near-human polyglot** **Text-to-Speech (TTS)** model trained on **1417 hours** of high-quality speech from **[Rasa](https://huggingface.co/datasets/ai4bharat/Rasa), [IndicTTS](https://www.iitm.ac.in/donlab/indictts/database), [LIMMITS](https://sites.google.com/view/limmits24/), and [IndicVoices-R](https://huggingface.co/datasets/ai4bharat/indicvoices_r)**.  
-
-        IndicF5 supports **11 Indian languages**:  
+        supports **11 Indian languages**:  
         **Assamese, Bengali, Gujarati, Hindi, Kannada, Malayalam, Marathi, Odia, Punjabi, Tamil, Telugu.**  
         
         Generate speech using a reference prompt audio and its corresponding text.
